@@ -1,26 +1,40 @@
 #include <stdio.h>
+#define LARGEST 10000000000
 
 /**
- * main - Entry point
- * a program that prints 98 fibonacci numbers
- * Return: Always 0 (Success)
+ * main - main.
+ * Description: Find and print the first 98 fib numbers starting
+ * with 1 and 2. * Numbers should be coma and space separated.
+ * Return: 0
  */
-
 int main(void)
 {
-int i;
-long int fib[98];
-fib[0] = 1;
-fib[1] = 2;
-printf("%ld, %ld, ", fib[0], fib[1]);
-for (i = 2; i < 98; i++)
+unsigned long int f1 = 0, b1 = 1, f2 = 0, b2 = 2;
+unsigned long int h1, h2, h3;
+int iter;
+
+printf("%lu, %lu, ", b1, b2);
+for (iter = 2; iter < 98; iter++)
 {
-fib[i] = fib[i - 1] + fib[i - 2];
-if (i == 97)
-printf("%ld\n", fib[i]);
-else
-printf("%ld, ", fib[i]);
+if (b1 + b2 > LARGEST || f2 > 0 || f1 > 0)
+{
+h1 = (b1 + b2) / LARGEST;
+h2 = (b1 + b2) % LARGEST;
+h3 = f1 + f2 + h1;
+f1 = f2, f2 = h3;
+b1 = b2, b2 = h2;
+printf("%lu%010lu", f2, b2);
 }
+else
+{
+h2 = b1 + b2;
+b1 = b2, b2 = h2;
+printf("%lu", b2);
+}
+if (iter != 97)
+printf(", ");
+}
+printf("\n");
 return (0);
 }
 
