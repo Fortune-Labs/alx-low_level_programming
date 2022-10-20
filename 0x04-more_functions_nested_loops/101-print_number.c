@@ -1,5 +1,4 @@
 #include "main.h"
-void print_integer(int m);
 
 /**
  * print_number - a function that prints an integer.
@@ -8,29 +7,15 @@ void print_integer(int m);
  */
 void print_number(int n)
 {
-if (n == 0)
-_putchar('0');
-else if (n < 0)
+unsigned int num = n;
+
+if (n < 0)
 {
 _putchar('-');
-print_integer(n * -1);
+num = -num;
 }
-else
-print_integer(n);
-}
+if ((num / 10) > 0)
+print_number(num / 10);
 
-/**
- * print_integer - A function to priting n
- * @m: an input unsigned integer
- * Return: Nothing
- */
-void print_integer(int m)
-{
-int t = 1000000000;
-
-for (; t >= 1; t /= 10)
-if (m / t != 0)
-{
-_putchar((m / t) % 10 + '0');
-}
+_putchar((num % 10) + '0');
 }
