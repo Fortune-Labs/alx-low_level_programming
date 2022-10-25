@@ -10,3 +10,13 @@ main.c
 8-main.c 
 9-main.c
 _putchar.c
+0-98
+9-strcpy
+8-print_array
+7-puts_half
+6-puts2
+5-rev_string
+4-print_rev
+3-puts
+2-strlen
+1-swap
