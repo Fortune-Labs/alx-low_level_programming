@@ -21,4 +21,5 @@ break;
 } while (*s++);
 
 return (num * sign_var);
+
 }

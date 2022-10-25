@@ -20,4 +20,5 @@ a = s[i];
 s[i++] = s[length];
 s[length] = a;
 }
+
 }
