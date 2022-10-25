@@ -16,4 +16,5 @@ length++;
 while (length)
 _putchar(s[--length]);
 _putchar('\n');
+
 }

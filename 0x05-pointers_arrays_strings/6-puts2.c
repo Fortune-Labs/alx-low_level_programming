@@ -18,4 +18,5 @@ length -= 1;
 for (; i <= length; i += 2)
 _putchar(str[i]);
 _putchar('\n');
+
 }
