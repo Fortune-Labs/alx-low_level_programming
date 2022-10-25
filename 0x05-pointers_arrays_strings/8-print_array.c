@@ -19,5 +19,4 @@ if (loop_var < n - 1)
 printf(", ");
 }
 putchar('\n');
-
 }
