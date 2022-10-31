@@ -10,13 +10,13 @@
  */
 void print_diagsums(int *a, int size)
 {
-int a = 0, end = size * size, sum_1 = 0, sum_2 = 0;
+int t = 0, max = size * size, sum1 = 0, sum2 = 0;
 
-for (; a < end; a += size + 1)
-sum_1 += a[a]; 
+for (; t < max; t += size + 1)
+sum1 += a[t];
 
-for (a = size - 1; a < end - 1; a += size - 1)
-sum_2 += a[a];
+for (t = size - 1; t < max - 1; t += size - 1)
+sum2 += a[t];
 
-printf("%d, %d\n", sum_1, sum_2);
+printf("%d, %d\n", sum1, sum2);
 }
