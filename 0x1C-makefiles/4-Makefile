@@ -1,9 +1,7 @@
-# -*- Makefile -*-
-
 CC = gcc
-SRC = main.c holberton.c
+SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
-NAME = holberton
+NAME = school
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
@@ -18,4 +16,4 @@ oclean:
 
 fclean: clean oclean
 
-re: oclean all
+re: fclean all
