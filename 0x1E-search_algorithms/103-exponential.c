@@ -1,7 +1,5 @@
 #include "search_algos.h"
 
-
-
 /**
  * binary_search - searches for a value in a sorted array of integers
  * using the binary search algorithm
@@ -11,7 +9,6 @@
  * @value: value to search for
  * Return: index of value or -1 if not found
  */
-
 int _binary_search(int *array, size_t left, size_t right, int value)
 {
 

@@ -8,7 +8,6 @@
  *@value: the value to search for
  *Return: first index where value is located
  */
-
 int interpolation_search(int *array, size_t size, int value)
 {
 	size_t i, l, r;
